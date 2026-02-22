@@ -8,6 +8,6 @@ dist-ssr
 *.psd
 portfolio-website-master.zip
 build_log*.txt
-*.glb
+# Removed *.glb to allow models to be tracked
 !package-lock.json
 public/
