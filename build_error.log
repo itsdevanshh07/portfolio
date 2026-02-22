@@ -1,0 +1,47 @@
+
+> build
+> webpack --config ./bundler/webpack.prod.js
+
+assets by status 93.9 MiB [1m[32m[cached][39m[22m 79 assets
+Entrypoint [1mmain[39m[22m = [1m[32mmain.css[39m[22m [1m[32mmain.bundle.1d66c6f8f1c12ae9.js[39m[22m 6 auxiliary assets
+Entrypoint [1mos[39m[22m = [1m[32mos.css[39m[22m [1m[32mos.bundle.f0379d3cc0f201a5.js[39m[22m 2 auxiliary assets
+orphan modules 3.45 MiB (javascript) 2.75 KiB (runtime) [1m[33m[orphan][39m[22m 2058 modules
+runtime modules 2.53 KiB 8 modules
+cacheable modules 2.43 MiB (javascript) 3.97 KiB (asset) 13 KiB (css/mini-extract)
+  javascript modules 2.43 MiB
+    modules by path [1m./node_modules/[39m[22m 201 KiB 20 modules
+    modules by path [1m./src/[39m[22m 2.23 MiB 2 modules
+  asset modules 3.97 KiB (asset) 168 bytes (javascript)
+    [1m./static/textures/UI/camera.svg[39m[22m 752 bytes (asset) 42 bytes (javascript) [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./static/textures/UI/mouse.svg[39m[22m 751 bytes (asset) 42 bytes (javascript) [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    + 2 modules
+  css modules 13 KiB
+    css ./node_modules/css-loader/dist/cjs.js![1m./src/style.css[39m[22m 1.47 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    css ./node_modules/css-loader/dist/cjs.js![1m./src/styles/os-theme.css[39m[22m 8.45 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    css ./node_modules/css-loader/dist/cjs.js![1m./src/Application/UI/style.css[39m[22m 3.07 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[31mERROR[39m[22m in [1mC:\Users\undhy\OneDrive\Desktop\portfolio\src\Application\UI\components\FreeCamToggle.tsx[39m[22m
+[1m./src/Application/UI/components/FreeCamToggle.tsx[39m[22m [1m[32m19:9-14[39m[22m
+[1m[tsl] [1m[31mERROR[39m[22m[1m in C:\Users\undhy\OneDrive\Desktop\portfolio\src\Application\UI\components\FreeCamToggle.tsx(19,10)
+      TS7006: Parameter 'event' implicitly has an 'any' type.[39m[22m
+ts-loader-default_e3b0c44298fc1c14
+ @ ./src/Application/UI/components/InfoOverlay.tsx 8:0-44 118:38-51
+ @ ./src/Application/UI/components/InterfaceUI.tsx 11:0-40 73:38-49
+ @ ./src/Application/UI/App.tsx 11:0-51 32:51-62
+ @ ./src/Application/UI/index.ts 1:0-49 4:8-16 5:8-22
+ @ ./src/Application/Application.ts 14:0-22 40:22-24
+ @ ./src/script.ts 2:0-52 3:16-27
+
+[1m[31mERROR[39m[22m in [1mC:\Users\undhy\OneDrive\Desktop\portfolio\src\Application\UI\components\MuteToggle.tsx[39m[22m
+[1m./src/Application/UI/components/MuteToggle.tsx[39m[22m [1m[32m18:9-14[39m[22m
+[1m[tsl] [1m[31mERROR[39m[22m[1m in C:\Users\undhy\OneDrive\Desktop\portfolio\src\Application\UI\components\MuteToggle.tsx(18,10)
+      TS7006: Parameter 'event' implicitly has an 'any' type.[39m[22m
+ts-loader-default_e3b0c44298fc1c14
+ @ ./src/Application/UI/components/InfoOverlay.tsx 9:0-38 116:38-48
+ @ ./src/Application/UI/components/InterfaceUI.tsx 11:0-40 73:38-49
+ @ ./src/Application/UI/App.tsx 11:0-51 32:51-62
+ @ ./src/Application/UI/index.ts 1:0-49 4:8-16 5:8-22
+ @ ./src/Application/Application.ts 14:0-22 40:22-24
+ @ ./src/script.ts 2:0-52 3:16-27
+
+webpack 5.104.1 compiled with [1m[31m2 errors[39m[22m in 47052 ms

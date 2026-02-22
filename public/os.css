@@ -1,5 +1,5 @@
 :root {
-    --os-bg: #f0f0f0;
+    --os-bg: #008080;
     --os-gray: #c0c0c0;
     --os-white: #ffffff;
     --os-dark-gray: #808080;
@@ -249,11 +249,12 @@ body::before {
 }
 
 .desktop-icon-label {
-    color: black;
+    color: white;
     font-size: 12px;
     text-align: center;
     word-break: break-word;
     padding: 2px 4px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 .window-container {

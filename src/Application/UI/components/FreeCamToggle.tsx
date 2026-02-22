@@ -7,16 +7,16 @@ import camera from '../../../../static/textures/UI/camera.svg';
 // @ts-ignore
 import mouse from '../../../../static/textures/UI/mouse.svg';
 
-interface MuteToggleProps {}
+interface FreeCamToggleProps { }
 
-const MuteToggle: React.FC<MuteToggleProps> = ({}) => {
+const FreeCamToggle: React.FC<FreeCamToggleProps> = ({ }) => {
     const [isHovering, setIsHovering] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const [freeCamActive, setFreeCamActive] = useState(false);
     const [blockEvents, setBlockEvents] = useState(true);
 
     const onMouseDownHandler = useCallback(
-        (event) => {
+        (event: React.MouseEvent) => {
             setIsActive(true);
             event.preventDefault();
             setFreeCamActive(!freeCamActive);
@@ -29,8 +29,8 @@ const MuteToggle: React.FC<MuteToggleProps> = ({}) => {
             ? 8
             : 10
         : window.innerWidth < 768
-        ? 4
-        : 6;
+            ? 4
+            : 6;
 
     const onMouseUpHandler = useCallback(() => {
         setIsActive(false);
@@ -69,29 +69,12 @@ const MuteToggle: React.FC<MuteToggleProps> = ({}) => {
                         isActive
                             ? 'active'
                             : isHovering
-                            ? 'hovering'
-                            : 'default'
+                                ? 'hovering'
+                                : 'default'
                     }
                     variants={iconVars}
                 />
             </div>
-            {/* <motion.div
-                initial="hidden"
-                animate={freeCamActive ? 'active' : 'hidden'}
-                variants={indicatorVars}
-                style={Object.assign({}, styles.container, { marginLeft: 4 })}
-                id="prevent-click"
-            >
-                <p
-                    style={
-                        window.innerWidth < 768
-                            ? { fontSize: 8 }
-                            : { fontSize: 10 }
-                    }
-                >
-                    Free Cam Enabled
-                </p>
-            </motion.div> */}
         </div>
     );
 };
@@ -123,24 +106,9 @@ const iconVars = {
     },
 };
 
-const indicatorVars = {
-    active: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.2,
-            ease: Easing.expOut,
-        },
-    },
-    hidden: {
-        x: -4,
-        opacity: 0,
-        transition: {
-            duration: 0.2,
-            ease: Easing.expOut,
-        },
-    },
-};
+interface StyleSheetCSS {
+    [key: string]: React.CSSProperties;
+}
 
 const styles: StyleSheetCSS = {
     container: {
@@ -163,4 +131,4 @@ const styles: StyleSheetCSS = {
     },
 };
 
-export default MuteToggle;
+export default FreeCamToggle;

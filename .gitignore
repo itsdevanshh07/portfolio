@@ -9,3 +9,4 @@ dist-ssr
 portfolio-website-master.zip
 build_log*.txt
 *.glb
+!package-lock.json

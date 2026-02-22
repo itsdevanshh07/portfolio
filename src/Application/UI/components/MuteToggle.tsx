@@ -7,15 +7,15 @@ import volumeOn from '../../../../static/textures/UI/volume_on.svg';
 // @ts-ignore
 import volumeOff from '../../../../static/textures/UI/volume_off.svg';
 
-interface MuteToggleProps {}
+interface MuteToggleProps { }
 
-const MuteToggle: React.FC<MuteToggleProps> = ({}) => {
+const MuteToggle: React.FC<MuteToggleProps> = ({ }) => {
     const [isHovering, setIsHovering] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const [muted, setMuted] = useState(false);
 
     const onMouseDownHandler = useCallback(
-        (event) => {
+        (event: React.MouseEvent) => {
             setIsActive(true);
             event.preventDefault();
             setMuted(!muted);
@@ -81,6 +81,10 @@ const iconVars = {
         },
     },
 };
+
+interface StyleSheetCSS {
+    [key: string]: React.CSSProperties;
+}
 
 const styles: StyleSheetCSS = {
     container: {
