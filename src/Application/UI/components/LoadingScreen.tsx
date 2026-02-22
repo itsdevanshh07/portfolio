@@ -31,6 +31,15 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
 
     window.addEventListener('resize', onResize);
 
+    const start = useCallback(() => {
+        setLoadingOverlayOpacity(0);
+        eventBus.dispatch('loadingScreenDone', {});
+        const ui = document.getElementById('ui');
+        if (ui) {
+            ui.style.pointerEvents = 'none';
+        }
+    }, []);
+
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('debug')) {
@@ -39,8 +48,35 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
             setWebGLError(true);
         } else {
             setShowBiosInfo(true);
+
+            // Focus window to capture keyboard events
+            window.focus();
+
+            const handleSkip = (e?: KeyboardEvent | MouseEvent) => {
+                // If it's a keyboard event, only skip on ESC or DEL
+                if (e instanceof KeyboardEvent) {
+                    if (e.key !== 'Escape' && e.key !== 'Delete') return;
+                }
+
+                // Proceed to loading resources
+                setShowLoadingResources(true);
+            };
+
+            // 3 second auto-skip fallback
+            const autoSkipTimeout = setTimeout(() => {
+                setShowLoadingResources(true);
+            }, 3000);
+
+            window.addEventListener('keydown', handleSkip);
+            window.addEventListener('mousedown', handleSkip);
+
+            return () => {
+                clearTimeout(autoSkipTimeout);
+                window.removeEventListener('keydown', handleSkip);
+                window.removeEventListener('mousedown', handleSkip);
+            };
         }
-    }, []);
+    }, [start]);
 
     useEffect(() => {
         eventBus.on('loadedSource', (data) => {
@@ -59,8 +95,10 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
     }, []);
 
     useEffect(() => {
-        setShowLoadingResources(true);
-        setCounter(counter + 1);
+        if (loaded > 0) {
+            setShowLoadingResources(true);
+            setCounter(c => c + 1);
+        }
     }, [loaded]);
 
     useEffect(() => {
@@ -83,15 +121,6 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
             }, 500);
         }
     }, [webGLError]);
-
-    const start = useCallback(() => {
-        setLoadingOverlayOpacity(0);
-        eventBus.dispatch('loadingScreenDone', {});
-        const ui = document.getElementById('ui');
-        if (ui) {
-            ui.style.pointerEvents = 'none';
-        }
-    }, []);
 
     const getSpace = (sourceName: string) => {
         let spaces = '';
@@ -162,7 +191,7 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         </div>
                     </div>
                     <div style={styles.body} className="loading-screen-body">
-                        <p>HSP S13 2000-2022 Special UC131S</p>
+                        <p>HSP S13 2000-2026 Special UC131S</p>
                         <div style={styles.spacer} />
                         {showBiosInfo && (
                             <>
@@ -227,7 +256,7 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                     <p>But do enjoy what I have done so far :)</p>
                     <div style={styles.spacer} />
                     <div style={styles.spacer} /> */}
-                    <p>Devansh Dhyani Portfolio Showcase 2022</p>
+                    <p>Devansh Dhyani Portfolio Showcase 2026</p>
                     {mobileWarning && (
                         <>
                             <br />
