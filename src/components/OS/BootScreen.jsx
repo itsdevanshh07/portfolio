@@ -7,7 +7,7 @@ const BootScreen = ({ onComplete, externalProgress }) => {
     const bootLogs = [
         "Searching for boot record from IDE-0.. OK",
         "Verifying DMI Pool Data ........... Success",
-        "Booting Antigravity OS 95...",
+        "Booting Antigravity OS 2026...",
         "Loading system drivers...",
         "Initializing GUI...",
         "Welcome to Antigravity OS"

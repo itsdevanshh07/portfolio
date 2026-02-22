@@ -18,7 +18,7 @@ const ShowcaseApp = () => {
             position: 'relative'
         }}>
             <h1 style={{ fontSize: '72px', margin: '0', fontWeight: '900', textAlign: 'center', letterSpacing: '-2px' }}>Devansh Dhyani</h1>
-            <h2 style={{ fontSize: '32px', margin: '0 0 40px 0', fontWeight: 'bold', textAlign: 'center' }}>Software Engineer</h2>
+            <h2 style={{ fontSize: '32px', margin: '0 0 40px 0', fontWeight: 'bold', textAlign: 'center' }}>Software Engineer | Full Stack Developer</h2>
 
             <div style={{ display: 'flex', gap: '30px', fontSize: '18px', marginTop: '20px' }}>
                 <button onClick={() => setActiveTab('about')} style={styles.navLink}>ABOUT</button>
@@ -28,7 +28,7 @@ const ShowcaseApp = () => {
             </div>
 
             <div style={{ position: 'absolute', bottom: '10px', left: '10px', fontSize: '12px', color: '#000' }}>
-                © Copyright 2022 Devansh Dhyani
+                © Copyright 2026 Devansh Dhyani
             </div>
         </div>
     );
@@ -45,7 +45,7 @@ const ShowcaseApp = () => {
             <div style={{ marginBottom: '30px' }}>
                 <h2 style={{ margin: 0, fontSize: '24px', fontWeight: '900' }}>Devansh</h2>
                 <h2 style={{ margin: 0, fontSize: '24px', fontWeight: '900' }}>Dhyani</h2>
-                <p style={{ margin: '5px 0', fontSize: '14px' }}>Showcase '22</p>
+                <p style={{ margin: '5px 0', fontSize: '14px' }}>Showcase '26</p>
             </div>
 
             <button onClick={() => setActiveTab('home')} style={activeTab === 'home' ? styles.sidebarLinkActive : styles.sidebarLink}>HOME</button>
@@ -62,15 +62,15 @@ const ShowcaseApp = () => {
             <h2 style={styles.contentSubtitle}>I'm Devansh Dhyani</h2>
 
             <p style={styles.paragraph}>
-                I'm a software engineer currently studying at Dev Bhoomi Uttarakhand University.
-                In 2027 I will graduate with my B.Tech in Computer Science and Engineering.
+                I'm a Results-driven B.Tech Computer Science student (3rd Year, SGPA 8.3) with hands-on experience in full-stack development, data analytics, and AI integration.
+                Currently studying at Dev Bhoomi Uttarakhand University, I bridge the gap between robust backend logic and immersive frontend design.
             </p>
 
             <p style={styles.paragraph}>
                 Thank you for taking the time to check out my portfolio. I really hope you enjoy
                 exploring it as much as I enjoyed building it. If you have any questions or
                 comments, feel free to contact me using <button onClick={() => setActiveTab('contact')} style={styles.inlineLink}>this form</button> or shoot me an email at
-                <a href="mailto:devanshdhyani@gmail.com" style={styles.inlineLink}>devanshdhyani@gmail.com</a>
+                <a href="mailto:undhyani07@gmail.com" style={styles.inlineLink}>undhyani07@gmail.com</a>
             </p>
 
             <div style={styles.resumeBox}>
@@ -85,14 +85,11 @@ const ShowcaseApp = () => {
 
             <h2 style={styles.sectionHeader}>About Me</h2>
             <p style={styles.paragraph}>
-                From a young age, I have had a curiosity about how things worked. This naturally led me to become
-                absolutely obsessed with building things. I specialize in Full Stack development (MERN) and
-                have a deep interest in Data Science and interactive web experiences.
+                I specialize in Full Stack development (MERN) and AI integration. My technical toolkit includes Java (DSA), JavaScript, Python, React.js, Next.js, and Three.js.
+                I have a proven ability to build production-ready applications and am passionate about data analytics and forensic technology.
             </p>
             <p style={styles.paragraph}>
-                I love bridging the gap between robust backend logic and immersive frontend design.
-                My goal is to create digital experiences that are not only functional but also
-                visually stunning and engaging.
+                Beyond coding, I enjoy performing data cleaning, analysis, and modeling. I have experience collaborating with cross-functional teams to optimize platform performance and user experience.
             </p>
         </div>
     );
@@ -109,12 +106,12 @@ const ShowcaseApp = () => {
             </div>
 
             <p style={styles.paragraph}>
-                I am currently a student, however if you have any opportunities, feel free to reach out -
+                I am currently a student (Expected Graduation 2027), however if you have any opportunities, feel free to reach out -
                 I would love to chat! You can reach me via my personal email, or fill out the form below!
             </p>
 
             <p style={styles.paragraph}>
-                <strong>Email:</strong> <a href="mailto:devanshdhyani@gmail.com" style={styles.inlineLink}>devanshdhyani@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:undhyani07@gmail.com" style={styles.inlineLink}>undhyani07@gmail.com</a>
             </p>
 
             <form style={styles.form}>
@@ -149,14 +146,50 @@ const ShowcaseApp = () => {
     const renderExperience = () => (
         <div style={styles.contentArea}>
             <h1 style={styles.contentTitle}>Experience</h1>
-            <p style={styles.paragraph}>Coming soon...</p>
+
+            <div style={styles.experienceItem}>
+                <h3 style={{ margin: '0' }}>Technical Support Executive & Frontend Developer</h3>
+                <p style={{ margin: '5px 0', fontWeight: 'bold' }}>EdTech Startup | 2026 – Present</p>
+                <ul style={styles.list}>
+                    <li>Developed responsive UI components using React/Next.js, HTML, CSS, and JavaScript.</li>
+                    <li>Collaborated with backend teams to integrate APIs and optimize platform performance.</li>
+                    <li>Provided technical support and resolved platform issues, improving user experience.</li>
+                </ul>
+            </div>
+
+            <div style={styles.experienceItem}>
+                <h3 style={{ margin: '0' }}>Data Analytics Intern</h3>
+                <p style={{ margin: '5px 0', fontWeight: 'bold' }}>Deloitte | June 2025 – October 2025</p>
+                <ul style={styles.list}>
+                    <li>Performed data cleaning, analysis, and modeling using Python and advanced spreadsheet tools.</li>
+                    <li>Developed data visualizations and structured reports simulating real client projects.</li>
+                    <li>Gained exposure to log analysis, web security fundamentals, and computer networking.</li>
+                </ul>
+            </div>
         </div>
     );
 
     const renderProjects = () => (
         <div style={styles.contentArea}>
             <h1 style={styles.contentTitle}>Projects</h1>
-            <p style={styles.paragraph}>Coming soon...</p>
+
+            <div style={styles.experienceItem}>
+                <h3 style={{ margin: '0' }}>AI-Integrated Job Portal</h3>
+                <p style={{ margin: '5px 0', fontWeight: 'bold' }}>MERN Stack (MongoDB, Express.js, React.js, Node.js)</p>
+                <ul style={styles.list}>
+                    <li>Built full-stack job portal with AI-based job-user matching, secure authentication, and recruiter management.</li>
+                    <li>Implemented responsive UI, optimized REST APIs, and scalable database models.</li>
+                </ul>
+            </div>
+
+            <div style={styles.experienceItem}>
+                <h3 style={{ margin: '0' }}>EdTech Platform</h3>
+                <p style={{ margin: '5px 0', fontWeight: 'bold' }}>Next.js + MERN Stack</p>
+                <ul style={styles.list}>
+                    <li>Developed modern EdTech platform with dynamic course pages and student dashboards.</li>
+                    <li>Optimized for cross-device responsiveness and integrated real-time data updates.</li>
+                </ul>
+            </div>
         </div>
     );
 
@@ -172,7 +205,7 @@ const ShowcaseApp = () => {
                         {activeTab === 'contact' && renderContact()}
 
                         <div style={{ padding: '20px', borderTop: '1px solid #eee', fontSize: '12px', color: '#666' }}>
-                            Copyright 2022 Devansh Dhyani
+                            Copyright 2026 Devansh Dhyani
                         </div>
                     </div>
                 </>
@@ -311,6 +344,17 @@ const styles = {
         cursor: 'pointer',
         fontSize: '16px',
         fontFamily: 'inherit'
+    },
+    experienceItem: {
+        marginBottom: '30px',
+        borderLeft: '4px solid #c0c0c0',
+        paddingLeft: '15px'
+    },
+    list: {
+        fontSize: '16px',
+        margin: '10px 0',
+        paddingLeft: '20px',
+        lineHeight: '1.6'
     }
 };
 

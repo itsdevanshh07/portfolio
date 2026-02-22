@@ -30,7 +30,7 @@ const StartMenu = ({ isOpen, onClose, onProgramClick, onShutDown }) => {
             }}
         >
             <div className="start-menu-sidebar">
-                <div className="start-menu-sidebar-text">Antigravity <span>95</span></div>
+                <div className="start-menu-sidebar-text">Antigravity <span>2026</span></div>
             </div>
             <div className="start-menu-content" style={{ flex: 1, padding: '2px' }}>
                 {menuItems.map((item, index) => (
